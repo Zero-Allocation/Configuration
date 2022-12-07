@@ -106,6 +106,21 @@ mkdir ~/Deb
 sudo apt install git
 ```
 
+### Git SSH Key
+
+```Bash
+ssh-keygen -t rsa -b 4096 -C "rusty.hann@zeroallocation.com"
+ssh-add ~/.ssh/id_rsa
+```
+
+### Install Git Credential Manager
+
+```Bash
+wget "https://github.com/GitCredentialManager/git-credential-manager/releases/download/v2.0.696/gcmcore-linux_amd64.2.0.696.deb" -O ~/Deb/gcmcore.deb
+sudo dpkg -i ~/Deb/gcmcore.deb
+git-credential-manager-core configure
+```
+
 ### Install Curl
 
 ```Bash
